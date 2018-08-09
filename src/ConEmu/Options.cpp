@@ -2739,6 +2739,7 @@ void Settings::LoadSettings(bool& rbNeedCreateVanilla, const SettingsStorage* ap
 		reg->Load(L"CTS.ColorIndex", isCTSColorIndex); if (CONFORECOLOR(isCTSColorIndex) == CONBACKCOLOR(isCTSColorIndex)) isCTSColorIndex = DefaultSelectionConsoleColor;
 
 		reg->Load(L"ClipboardConfirmEnter", isPasteConfirmEnter);
+		reg->Load(L"AutoTrimSingleLine", isAutoTrimSingleLine);
 		reg->Load(L"ClipboardConfirmLonger", nPasteConfirmLonger);
 
 		reg->Load(L"FarGotoEditorOpt", isFarGotoEditor);
@@ -3794,6 +3795,7 @@ BOOL Settings::SaveSettings(BOOL abSilent /*= FALSE*/, const SettingsStorage* ap
 		reg->Save(L"CTS.ColorIndex", isCTSColorIndex);
 
 		reg->Save(L"ClipboardConfirmEnter", isPasteConfirmEnter);
+		reg->Save(L"AutoTrimSingleLine", isAutoTrimSingleLine);
 		reg->Save(L"ClipboardConfirmLonger", nPasteConfirmLonger);
 
 		reg->Save(L"FarGotoEditorOpt", isFarGotoEditor);
